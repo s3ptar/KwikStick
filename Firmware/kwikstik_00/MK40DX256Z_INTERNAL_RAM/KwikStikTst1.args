@@ -1,0 +1,22 @@
+"./Generated_Code/eDMA1_c.obj"
+"./Generated_Code/Vectors_c.obj"
+"./Generated_Code/SegLCD1_c.obj"
+"./Generated_Code/PE_LDD_c.obj"
+"./Generated_Code/PDB1_c.obj"
+"./Generated_Code/GPIO1_c.obj"
+"./Generated_Code/Cpu_c.obj"
+"./Generated_Code/ADC2_c.obj"
+"./Sources/SLCD_c.obj"
+"./Sources/ProcessorExpert_c.obj"
+"./Sources/Events_c.obj"
+-proc cortex-m4
+-fp soft
+-little
+-msgstyle parseable
+-g3
+-thumb
+-interworking
+-lavender model=ewl ,print=int ,scan=int ,io=raw
+"$(ProjDirPath)/Project_Settings/Linker_Files/ProcessorExpert.lcf"
+-main __thumb_startup
+-L"$(MCUToolsBaseDirEnv)/ARM_EABI_Support/ewl/lib"

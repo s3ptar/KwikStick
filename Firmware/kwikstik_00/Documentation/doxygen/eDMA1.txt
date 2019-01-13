@@ -1,0 +1,1041 @@
+/*!
+\page eDMA1 eDMA1 (Init_eDMA)
+**          This file implements the eDMA (DMA) module initialization
+**          according to the Peripheral Initialization settings, and
+**          defines interrupt service routines prototypes.
+
+- \subpage eDMA1_settings
+- \subpage eDMA1_regs_overview  
+- \subpage eDMA1_regs_details
+- \ref eDMA1_module "Component documentation" 
+
+\page eDMA1_regs_overview Registers Initialization Overview
+This page initialization values for the registers of the peripheral(s) configured
+by the component. 
+<table>
+<tr><td colspan="4" class="ttitle1">eDMA1 Initialization</td></tr>
+<tr><td class="ttitle2">Address</td><td class="ttitle2">Register</td><td class="ttitle2">Register Value</td><td class="ttitle2">Register Description</td></tr>
+<tr><td>0x40048040</td><td>SIM_SCGC7</td><td>
+    0x00000002
+ </td><td>SIM_SCGC7 register, peripheral eDMA1.</td></tr>
+<tr><td>0x4004803C</td><td>SIM_SCGC6</td><td>
+    0x08400002
+ </td><td>SIM_SCGC6 register, peripheral eDMA1.</td></tr>
+<tr><td>0x40021000</td><td>DMAMUX_CHCFG0</td><td>
+    0x000000A8
+ </td><td>DMAMUX_CHCFG0 register, peripheral eDMA1.</td></tr>
+<tr><td>0x40008000</td><td>DMA_CR</td><td>
+    0x00000002
+ </td><td>DMA_CR register, peripheral eDMA1.</td></tr>
+<tr><td>0x40008103</td><td>DMA_DCHPRI0</td><td>
+    0x00000000
+ </td><td>DMA_DCHPRI0 register, peripheral eDMA1.</td></tr>
+<tr><td>0x4000802C</td><td>DMA_ERR</td><td>
+    0x00000001
+ </td><td>DMA_ERR register, peripheral eDMA1.</td></tr>
+<tr><td>0x40008024</td><td>DMA_INT</td><td>
+    0x00000001
+ </td><td>DMA_INT register, peripheral eDMA1.</td></tr>
+<tr><td>0x40008014</td><td>DMA_EEI</td><td>
+    0x00000001
+ </td><td>DMA_EEI register, peripheral eDMA1.</td></tr>
+<tr><td>0x40009016</td><td>DMA_TCD0_CITER_ELINKNO</td><td>
+    0x00000028
+ </td><td>DMA_TCD0_CITER_ELINKNO register, peripheral eDMA1.</td></tr>
+<tr><td>0x4000901E</td><td>DMA_TCD0_BITER_ELINKNO</td><td>
+    0x00000028
+ </td><td>DMA_TCD0_BITER_ELINKNO register, peripheral eDMA1.</td></tr>
+<tr><td>0x40009008</td><td>DMA_TCD0_NBYTES_MLNO</td><td>
+    0x00000002
+ </td><td>DMA_TCD0_NBYTES_MLNO register, peripheral eDMA1.</td></tr>
+<tr><td>0x40009004</td><td>DMA_TCD0_SOFF</td><td>
+    0x00000000
+ </td><td>DMA_TCD0_SOFF register, peripheral eDMA1.</td></tr>
+<tr><td>0x40009006</td><td>DMA_TCD0_ATTR</td><td>
+    0x00000101
+ </td><td>DMA_TCD0_ATTR register, peripheral eDMA1.</td></tr>
+<tr><td>0x4000900C</td><td>DMA_TCD0_SLAST</td><td>
+    0x00000000
+ </td><td>DMA_TCD0_SLAST register, peripheral eDMA1.</td></tr>
+<tr><td>0x40009014</td><td>DMA_TCD0_DOFF</td><td>
+    0x00000002
+ </td><td>DMA_TCD0_DOFF register, peripheral eDMA1.</td></tr>
+<tr><td>0x40009018</td><td>DMA_TCD0_DLASTSGA</td><td>
+    0x00000000
+ </td><td>DMA_TCD0_DLASTSGA register, peripheral eDMA1.</td></tr>
+<tr><td>0x4000901C</td><td>DMA_TCD0_CSR</td><td>
+    0x00000002
+ </td><td>DMA_TCD0_CSR register, peripheral eDMA1.</td></tr>
+<tr><td>0x4000800C</td><td>DMA_ERQ</td><td>
+    0x00000001
+ </td><td>DMA_ERQ register, peripheral eDMA1.</td></tr>
+</table>
+<br/>
+\page eDMA1_regs_details Register Initialization Details
+This page contains detailed description of initialization values for the 
+registers of the peripheral(s) configured by the component. 
+
+<div class="reghdr1">SIM_SCGC7</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">MPU</td><td colspan="1" rowspan="2">DMA</td>
+<td colspan="1" rowspan="2">FLEXBUS</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40048040</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000002</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000007</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>2</td><td>MPU</td><td>0x00</td><td>MPU Clock Gate Control</td>
+<tr><td>1</td><td>DMA</td><td>0x01</td><td>DMA Clock Gate Control</td>
+<tr><td>0</td><td>FLEXBUS</td><td>0x00</td><td>FlexBus Clock Gate Control</td>
+</tr></table>
+<div class="reghdr1">SIM_SCGC6</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">RTC</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">ADC0</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">FTM1</td><td colspan="1" rowspan="2">FTM0</td><td colspan="1" rowspan="2">PIT</td>
+<td colspan="1" rowspan="2">PDB</td><td colspan="1" rowspan="2">USBDCD</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">CRC</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">I2S</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">SPI1</td><td colspan="1" rowspan="2">SPI0</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">FLEXCAN0</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">DMAMUX</td><td colspan="1" rowspan="2">FTFL</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4004803C</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x08400002</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x40000001</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>29</td><td>RTC</td><td>0x00</td><td>RTC Clock Gate Control</td>
+<tr><td>27</td><td>ADC0</td><td>0x01</td><td>ADC0 Clock Gate Control</td>
+<tr><td>25</td><td>FTM1</td><td>0x00</td><td>FTM1 Clock Gate Control</td>
+<tr><td>24</td><td>FTM0</td><td>0x00</td><td>FTM0 Clock Gate Control</td>
+<tr><td>23</td><td>PIT</td><td>0x00</td><td>PIT Clock Gate Control</td>
+<tr><td>22</td><td>PDB</td><td>0x01</td><td>PDB Clock Gate Control</td>
+<tr><td>21</td><td>USBDCD</td><td>0x00</td><td>USB DCD Clock Gate Control</td>
+<tr><td>18</td><td>CRC</td><td>0x00</td><td>CRC Clock Gate Control</td>
+<tr><td>15</td><td>I2S</td><td>0x00</td><td>I2S Clock Gate Control</td>
+<tr><td>13</td><td>SPI1</td><td>0x00</td><td>SPI1 Clock Gate Control</td>
+<tr><td>12</td><td>SPI0</td><td>0x00</td><td>SPI0 Clock Gate Control</td>
+<tr><td>4</td><td>FLEXCAN0</td><td>0x00</td><td>FlexCAN0 Clock Gate Control</td>
+<tr><td>1</td><td>DMAMUX</td><td>0x01</td><td>DMA Mux Clock Gate Control</td>
+<tr><td>0</td><td>FTFL</td><td>0x00</td><td>Flash Memory Clock Gate Control</td>
+</tr></table>
+<div class="reghdr1">DMAMUX_CHCFG0</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">ENBL</td><td colspan="1" rowspan="2">TRIG</td>
+<td colspan="6" rowspan="2">SOURCE</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40021000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x000000A8</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>ENBL</td><td>0x01</td><td>DMA Channel Enable</td>
+<tr><td>6</td><td>TRIG</td><td>0x00</td><td>DMA Channel Trigger Enable</td>
+<tr><td>0 - 5</td><td>SOURCE</td><td>0x20</td><td>DMA Channel Source (slot)</td>
+</tr></table>
+<div class="reghdr1">DMA_CR</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">CX</td>
+<td colspan="1" rowspan="2">ECX</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">EMLM</td>
+<td colspan="1" rowspan="2">CLM</td><td colspan="1" rowspan="2">HALT</td><td colspan="1" rowspan="2">HOE</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">ERCA</td><td colspan="1" rowspan="2">EDBG</td>
+<td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40008000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000002</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>17</td><td>CX</td><td>0x00</td><td>Cancel Transfer</td>
+<tr><td>16</td><td>ECX</td><td>0x00</td><td>Error Cancel Transfer</td>
+<tr><td>7</td><td>EMLM</td><td>0x00</td><td>Enable Minor Loop Mapping</td>
+<tr><td>6</td><td>CLM</td><td>0x00</td><td>Continuous Link Mode</td>
+<tr><td>5</td><td>HALT</td><td>0x00</td><td>Halt DMA Operations</td>
+<tr><td>4</td><td>HOE</td><td>0x00</td><td>Halt On Error</td>
+<tr><td>2</td><td>ERCA</td><td>0x00</td><td>Enable Round Robin Channel Arbitration</td>
+<tr><td>1</td><td>EDBG</td><td>0x01</td><td>Enable Debug</td>
+</tr></table>
+<div class="reghdr1">DMA_DCHPRI0</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>7</td><td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">ECP</td><td colspan="1" rowspan="2">DPA</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="4" rowspan="2">CHPRI</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40008103</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>7</td><td>ECP</td><td>0x00</td><td>Enable Channel Preemption</td>
+<tr><td>6</td><td>DPA</td><td>0x00</td><td>Disable Preempt Ability</td>
+<tr><td>0 - 3</td><td>CHPRI</td><td>0x00</td><td>Channel n Arbitration Priority</td>
+</tr></table>
+<div class="reghdr1">DMA_ERR</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">ERR15</td><td colspan="1" rowspan="2">ERR14</td>
+<td colspan="1" rowspan="2">ERR13</td><td colspan="1" rowspan="2">ERR12</td><td colspan="1" rowspan="2">ERR11</td>
+<td colspan="1" rowspan="2">ERR10</td><td colspan="1" rowspan="2">ERR9</td><td colspan="1" rowspan="2">ERR8</td>
+<td colspan="1" rowspan="2">ERR7</td><td colspan="1" rowspan="2">ERR6</td><td colspan="1" rowspan="2">ERR5</td>
+<td colspan="1" rowspan="2">ERR4</td><td colspan="1" rowspan="2">ERR3</td><td colspan="1" rowspan="2">ERR2</td>
+<td colspan="1" rowspan="2">ERR1</td><td colspan="1" rowspan="2">ERR0</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4000802C</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000001</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>15</td><td>ERR15</td><td>0x00</td><td>Error In Channel 15</td>
+<tr><td>14</td><td>ERR14</td><td>0x00</td><td>Error In Channel 14</td>
+<tr><td>13</td><td>ERR13</td><td>0x00</td><td>Error In Channel 13</td>
+<tr><td>12</td><td>ERR12</td><td>0x00</td><td>Error In Channel 12</td>
+<tr><td>11</td><td>ERR11</td><td>0x00</td><td>Error In Channel 11</td>
+<tr><td>10</td><td>ERR10</td><td>0x00</td><td>Error In Channel 10</td>
+<tr><td>9</td><td>ERR9</td><td>0x00</td><td>Error In Channel 9</td>
+<tr><td>8</td><td>ERR8</td><td>0x00</td><td>Error In Channel 8</td>
+<tr><td>7</td><td>ERR7</td><td>0x00</td><td>Error In Channel 7</td>
+<tr><td>6</td><td>ERR6</td><td>0x00</td><td>Error In Channel 6</td>
+<tr><td>5</td><td>ERR5</td><td>0x00</td><td>Error In Channel 5</td>
+<tr><td>4</td><td>ERR4</td><td>0x00</td><td>Error In Channel 4</td>
+<tr><td>3</td><td>ERR3</td><td>0x00</td><td>Error In Channel 3</td>
+<tr><td>2</td><td>ERR2</td><td>0x00</td><td>Error In Channel 2</td>
+<tr><td>1</td><td>ERR1</td><td>0x00</td><td>Error In Channel 1</td>
+<tr><td>0</td><td>ERR0</td><td>0x01</td><td>Error In Channel 0</td>
+</tr></table>
+<div class="reghdr1">DMA_INT</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">INT15</td><td colspan="1" rowspan="2">INT14</td>
+<td colspan="1" rowspan="2">INT13</td><td colspan="1" rowspan="2">INT12</td><td colspan="1" rowspan="2">INT11</td>
+<td colspan="1" rowspan="2">INT10</td><td colspan="1" rowspan="2">INT9</td><td colspan="1" rowspan="2">INT8</td>
+<td colspan="1" rowspan="2">INT7</td><td colspan="1" rowspan="2">INT6</td><td colspan="1" rowspan="2">INT5</td>
+<td colspan="1" rowspan="2">INT4</td><td colspan="1" rowspan="2">INT3</td><td colspan="1" rowspan="2">INT2</td>
+<td colspan="1" rowspan="2">INT1</td><td colspan="1" rowspan="2">INT0</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40008024</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000001</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>15</td><td>INT15</td><td>0x00</td><td>Interrupt Request 15</td>
+<tr><td>14</td><td>INT14</td><td>0x00</td><td>Interrupt Request 14</td>
+<tr><td>13</td><td>INT13</td><td>0x00</td><td>Interrupt Request 13</td>
+<tr><td>12</td><td>INT12</td><td>0x00</td><td>Interrupt Request 12</td>
+<tr><td>11</td><td>INT11</td><td>0x00</td><td>Interrupt Request 11</td>
+<tr><td>10</td><td>INT10</td><td>0x00</td><td>Interrupt Request 10</td>
+<tr><td>9</td><td>INT9</td><td>0x00</td><td>Interrupt Request 9</td>
+<tr><td>8</td><td>INT8</td><td>0x00</td><td>Interrupt Request 8</td>
+<tr><td>7</td><td>INT7</td><td>0x00</td><td>Interrupt Request 7</td>
+<tr><td>6</td><td>INT6</td><td>0x00</td><td>Interrupt Request 6</td>
+<tr><td>5</td><td>INT5</td><td>0x00</td><td>Interrupt Request 5</td>
+<tr><td>4</td><td>INT4</td><td>0x00</td><td>Interrupt Request 4</td>
+<tr><td>3</td><td>INT3</td><td>0x00</td><td>Interrupt Request 3</td>
+<tr><td>2</td><td>INT2</td><td>0x00</td><td>Interrupt Request 2</td>
+<tr><td>1</td><td>INT1</td><td>0x00</td><td>Interrupt Request 1</td>
+<tr><td>0</td><td>INT0</td><td>0x01</td><td>Interrupt Request 0</td>
+</tr></table>
+<div class="reghdr1">DMA_EEI</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">EEI15</td><td colspan="1" rowspan="2">EEI14</td>
+<td colspan="1" rowspan="2">EEI13</td><td colspan="1" rowspan="2">EEI12</td><td colspan="1" rowspan="2">EEI11</td>
+<td colspan="1" rowspan="2">EEI10</td><td colspan="1" rowspan="2">EEI9</td><td colspan="1" rowspan="2">EEI8</td>
+<td colspan="1" rowspan="2">EEI7</td><td colspan="1" rowspan="2">EEI6</td><td colspan="1" rowspan="2">EEI5</td>
+<td colspan="1" rowspan="2">EEI4</td><td colspan="1" rowspan="2">EEI3</td><td colspan="1" rowspan="2">EEI2</td>
+<td colspan="1" rowspan="2">EEI1</td><td colspan="1" rowspan="2">EEI0</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40008014</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000001</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>15</td><td>EEI15</td><td>0x00</td><td>Enable Error Interrupt 15</td>
+<tr><td>14</td><td>EEI14</td><td>0x00</td><td>Enable Error Interrupt 14</td>
+<tr><td>13</td><td>EEI13</td><td>0x00</td><td>Enable Error Interrupt 13</td>
+<tr><td>12</td><td>EEI12</td><td>0x00</td><td>Enable Error Interrupt 12</td>
+<tr><td>11</td><td>EEI11</td><td>0x00</td><td>Enable Error Interrupt 11</td>
+<tr><td>10</td><td>EEI10</td><td>0x00</td><td>Enable Error Interrupt 10</td>
+<tr><td>9</td><td>EEI9</td><td>0x00</td><td>Enable Error Interrupt 9</td>
+<tr><td>8</td><td>EEI8</td><td>0x00</td><td>Enable Error Interrupt 8</td>
+<tr><td>7</td><td>EEI7</td><td>0x00</td><td>Enable Error Interrupt 7</td>
+<tr><td>6</td><td>EEI6</td><td>0x00</td><td>Enable Error Interrupt 6</td>
+<tr><td>5</td><td>EEI5</td><td>0x00</td><td>Enable Error Interrupt 5</td>
+<tr><td>4</td><td>EEI4</td><td>0x00</td><td>Enable Error Interrupt 4</td>
+<tr><td>3</td><td>EEI3</td><td>0x00</td><td>Enable Error Interrupt 3</td>
+<tr><td>2</td><td>EEI2</td><td>0x00</td><td>Enable Error Interrupt 2</td>
+<tr><td>1</td><td>EEI1</td><td>0x00</td><td>Enable Error Interrupt 1</td>
+<tr><td>0</td><td>EEI0</td><td>0x01</td><td>Enable Error Interrupt 0</td>
+</tr></table>
+<div class="reghdr1">DMA_TCD0_CITER_ELINKNO</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">ELINK</td><td colspan="15" rowspan="2">CITER</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40009016</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000028</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>15</td><td>ELINK</td><td>0x00</td><td>Enable channel-to-channel linking on minor-loop complete</td>
+<tr><td>0 - 14</td><td>CITER</td><td>0x00</td><td>Current Major Iteration Count</td>
+</tr></table>
+<div class="reghdr1">DMA_TCD0_BITER_ELINKNO</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">ELINK</td><td colspan="15" rowspan="2">BITER</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4000901E</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000028</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>15</td><td>ELINK</td><td>0x00</td><td>Enables channel-to-channel linking on minor loop complete</td>
+<tr><td>0 - 14</td><td>BITER</td><td>0x00</td><td>Starting Major Iteration Count</td>
+</tr></table>
+<div class="reghdr1">DMA_TCD0_NBYTES_MLNO</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="16" rowspan="2">NBYTES</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="32" rowspan="2">NBYTES</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40009008</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000002</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>0 - 31</td><td>NBYTES</td><td>0x00</td><td>Minor Byte Transfer Count</td>
+</tr></table>
+<div class="reghdr1">DMA_TCD0_SOFF</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="16" rowspan="2">SOFF</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40009004</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>0 - 15</td><td>SOFF</td><td>0x00</td><td>Source address signed offset</td>
+</tr></table>
+<div class="reghdr1">DMA_TCD0_ATTR</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="5" rowspan="2">SMOD</td><td colspan="3" rowspan="2">SSIZE</td>
+<td colspan="5" rowspan="2">DMOD</td><td colspan="3" rowspan="2">DSIZE</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40009006</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000101</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>11 - 15</td><td>SMOD</td><td>0x00</td><td>Source Address Modulo</td>
+<tr><td>8 - 10</td><td>SSIZE</td><td>0x00</td><td>Source data transfer size</td>
+<tr><td>3 - 7</td><td>DMOD</td><td>0x00</td><td>Destination Address Modulo</td>
+<tr><td>0 - 2</td><td>DSIZE</td><td>0x00</td><td>Destination Data Transfer Size</td>
+</tr></table>
+<div class="reghdr1">DMA_TCD0_SLAST</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="16" rowspan="2">SLAST</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="32" rowspan="2">SLAST</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4000900C</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>0 - 31</td><td>SLAST</td><td>0x00</td><td>Last source Address Adjustment</td>
+</tr></table>
+<div class="reghdr1">DMA_TCD0_DOFF</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="16" rowspan="2">DOFF</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40009014</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000002</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>0 - 15</td><td>DOFF</td><td>0x00</td><td>Destination Address Signed offset</td>
+</tr></table>
+<div class="reghdr1">DMA_TCD0_DLASTSGA</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="16" rowspan="2">DLASTSGA</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="32" rowspan="2">DLASTSGA</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x40009018</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000000</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+</tr></table>
+<div class="reghdr1">DMA_TCD0_CSR</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="2" rowspan="2">BWC</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="4" rowspan="2">MAJORLINKCH</td><td colspan="1" rowspan="2">DONE</td><td colspan="1" rowspan="2">ACTIVE</td>
+<td colspan="1" rowspan="2">MAJORELINK</td><td colspan="1" rowspan="2">ESG</td><td colspan="1" rowspan="2">DREQ</td>
+<td colspan="1" rowspan="2">INTHALF</td><td colspan="1" rowspan="2">INTMAJOR</td><td colspan="1" rowspan="2">START</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4000901C</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000002</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>14 - 15</td><td>BWC</td><td>0x00</td><td>Bandwidth Control</td>
+<tr><td>8 - 11</td><td>MAJORLINKCH</td><td>0x00</td><td>Link Channel Number</td>
+<tr><td>7</td><td>DONE</td><td>0x00</td><td>Channel Done</td>
+<tr><td>6</td><td>ACTIVE</td><td>0x00</td><td>Channel Active</td>
+<tr><td>5</td><td>MAJORELINK</td><td>0x00</td><td>Enable channel-to-channel linking on major loop complete</td>
+<tr><td>4</td><td>ESG</td><td>0x00</td><td>Enable Scatter/Gather Processing</td>
+<tr><td>3</td><td>DREQ</td><td>0x00</td><td>Disable Request</td>
+<tr><td>2</td><td>INTHALF</td><td>0x00</td><td>Enable an interrupt when major counter is half complete</td>
+<tr><td>1</td><td>INTMAJOR</td><td>0x01</td><td>Enable an interrupt when major iteration count completes</td>
+<tr><td>0</td><td>START</td><td>0x00</td><td>Channel Start</td>
+</tr></table>
+<div class="reghdr1">DMA_ERQ</div>
+<div class="regdiag">
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>31</td><td>30</td><td>29</td><td>28</td><td>27</td><td>26</td><td>25</td><td>24</td><td>23</td>
+<td>22</td><td>21</td><td>20</td><td>19</td><td>18</td><td>17</td><td>16</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td><td colspan="1" rowspan="2">-</td>
+<td colspan="1" rowspan="2">-</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+<table class="regtbl">
+<tr class="trd1r">
+<td class="trd1c">Bit</td><td>15</td><td>14</td><td>13</td><td>12</td><td>11</td><td>10</td><td>9</td><td>8</td><td>7</td>
+<td>6</td><td>5</td><td>4</td><td>3</td><td>2</td><td>1</td><td>0</td>
+</tr>
+<tr>
+<td class="trd1c">R</td><td colspan="1" rowspan="2">ERQ15</td><td colspan="1" rowspan="2">ERQ14</td>
+<td colspan="1" rowspan="2">ERQ13</td><td colspan="1" rowspan="2">ERQ12</td><td colspan="1" rowspan="2">ERQ11</td>
+<td colspan="1" rowspan="2">ERQ10</td><td colspan="1" rowspan="2">ERQ9</td><td colspan="1" rowspan="2">ERQ8</td>
+<td colspan="1" rowspan="2">ERQ7</td><td colspan="1" rowspan="2">ERQ6</td><td colspan="1" rowspan="2">ERQ5</td>
+<td colspan="1" rowspan="2">ERQ4</td><td colspan="1" rowspan="2">ERQ3</td><td colspan="1" rowspan="2">ERQ2</td>
+<td colspan="1" rowspan="2">ERQ1</td><td colspan="1" rowspan="2">ERQ0</td>
+</tr>
+<tr>
+<td class="trd1c">W</td>
+</tr>
+<tr class="trd1r">
+<td class="trd1c">Reset</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+<td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td>
+</tr>
+</table>
+        
+</div>
+<table class="regtbl2"><tr><td class="trowtit" colspan="2">Address</td><td colspan="2">0x4000800C</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">Initial value</td><td colspan="2">0x00000001</td></tr>
+<tr class="trowtit"><td  class="trowtit" colspan="2">After-reset value</td><td colspan="2">0x00000000</td></tr>
+<tr><td class="ttitle2">Bit</td><td class="ttitle2">Field</td><td class="ttitle2">Value</td><td class="ttitle2">Description</td></tr>
+<tr><td>15</td><td>ERQ15</td><td>0x00</td><td>Enable DMA Request 15</td>
+<tr><td>14</td><td>ERQ14</td><td>0x00</td><td>Enable DMA Request 14</td>
+<tr><td>13</td><td>ERQ13</td><td>0x00</td><td>Enable DMA Request 13</td>
+<tr><td>12</td><td>ERQ12</td><td>0x00</td><td>Enable DMA Request 12</td>
+<tr><td>11</td><td>ERQ11</td><td>0x00</td><td>Enable DMA Request 11</td>
+<tr><td>10</td><td>ERQ10</td><td>0x00</td><td>Enable DMA Request 10</td>
+<tr><td>9</td><td>ERQ9</td><td>0x00</td><td>Enable DMA Request 9</td>
+<tr><td>8</td><td>ERQ8</td><td>0x00</td><td>Enable DMA Request 8</td>
+<tr><td>7</td><td>ERQ7</td><td>0x00</td><td>Enable DMA Request 7</td>
+<tr><td>6</td><td>ERQ6</td><td>0x00</td><td>Enable DMA Request 6</td>
+<tr><td>5</td><td>ERQ5</td><td>0x00</td><td>Enable DMA Request 5</td>
+<tr><td>4</td><td>ERQ4</td><td>0x00</td><td>Enable DMA Request 4</td>
+<tr><td>3</td><td>ERQ3</td><td>0x00</td><td>Enable DMA Request 3</td>
+<tr><td>2</td><td>ERQ2</td><td>0x00</td><td>Enable DMA Request 2</td>
+<tr><td>1</td><td>ERQ1</td><td>0x00</td><td>Enable DMA Request 1</td>
+<tr><td>0</td><td>ERQ0</td><td>0x01</td><td>Enable DMA Request 0</td>
+</tr></table>
+*/
+/*!
+\page eDMA1_settings Component Settings
+\code
+**          Component name                                 : eDMA1
+**          Device                                         : DMA
+**          Settings                                       : 
+**            Clock gate for DMA                           : Enabled
+**            Clock gate for DMA multiplexor               : Enabled
+**            Peripheral access control                    : Peripheral access control settings in the CPU component
+**            Master privilege level                       : Masters privilege settings in the CPU component
+**            Channel arbitration                          : Fixed priority
+**            Minor loop mapping                           : Disabled
+**            Continuous link mode                         : Disabled
+**            Halt on error                                : Disabled
+**            Enable debug                                 : yes
+**          Channels                                       : 
+**            Channel 0                                    : Initialize
+**              Settings                                   : 
+**                Auto disable external request            : Disabled
+**                Preemption                               : Disabled
+**                Preempt ability                          : Enabled
+**                Channel arbitration priority             : Default
+**                Bandwidth control                        : No stalls
+**                DMA source muxing                        : 
+**                  Channel                                : Enabled
+**                  Channel trigger                        : Disabled
+**                  Channel source                         : ADC0
+**                Data source                              : 
+**                  External object declaration            : 
+**                  Address                                : (uint32_t)&ADC0_RA
+**                  Transfer size                          : 16-bit
+**                  Address offset                         : 0
+**                  Address adjustment                     : 0
+**                  Address modulo                         : Buffer disabled
+**                Data destination                         : 
+**                  External object declaration            : extern uint16_t MeasuredValues[];
+**                  Address                                : &MeasuredValues
+**                  Transfer size                          : 16-bit
+**                  Address offset                         : 2
+**                  Address adjustment                     : 0
+**                  Address modulo                         : Buffer disabled
+**                Minor loop maping                        : Disabled
+**                  Block length                           : 2
+**                Minor linking                            : Disabled
+**                  Major iteration count                  : 40
+**                Major linking                            : Disabled
+**                Major link channel number                : 0
+**                Scatter/gather processing                : Disabled
+**              Interrupts                                 : 
+**                Transfer done                            : 
+**                  Half transfer interrupt                : Disabled
+**                  Transfer complete interrupt            : Enabled
+**                Error                                    : 
+**                  Error interrupt                        : Enabled
+**              Pins                                       : 
+**                DMA trigger                              : Disabled
+**              Initialization                             : 
+**                External request                         : Enabled
+**                Start transfer                           : no
+**            Channel 1                                    : Do not initialize
+**            Channel 2                                    : Do not initialize
+**            Channel 3                                    : Do not initialize
+**            Channel 4                                    : Do not initialize
+**            Channel 5                                    : Do not initialize
+**            Channel 6                                    : Do not initialize
+**            Channel 7                                    : Do not initialize
+**            Channel 8                                    : Do not initialize
+**            Channel 9                                    : Do not initialize
+**            Channel 10                                   : Do not initialize
+**            Channel 11                                   : Do not initialize
+**            Channel 12                                   : Do not initialize
+**            Channel 13                                   : Do not initialize
+**            Channel 14                                   : Do not initialize
+**            Channel 15                                   : Do not initialize
+**          Interrupts                                     : 
+**            Transfer done 0                              : 
+**              Interrupt                                  : INT_DMA0
+**              Interrupt request                          : Enabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : DMA_ADC_DoneInterrupt
+**            Transfer done 1                              : 
+**              Interrupt                                  : INT_DMA1
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 2                              : 
+**              Interrupt                                  : INT_DMA2
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 3                              : 
+**              Interrupt                                  : INT_DMA3
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 4                              : 
+**              Interrupt                                  : INT_DMA4
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 5                              : 
+**              Interrupt                                  : INT_DMA5
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 6                              : 
+**              Interrupt                                  : INT_DMA6
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 7                              : 
+**              Interrupt                                  : INT_DMA7
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 8                              : 
+**              Interrupt                                  : INT_DMA8
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 9                              : 
+**              Interrupt                                  : INT_DMA9
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 10                             : 
+**              Interrupt                                  : INT_DMA10
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 11                             : 
+**              Interrupt                                  : INT_DMA11
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 12                             : 
+**              Interrupt                                  : INT_DMA12
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 13                             : 
+**              Interrupt                                  : INT_DMA13
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 14                             : 
+**              Interrupt                                  : INT_DMA14
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Transfer done 15                             : 
+**              Interrupt                                  : INT_DMA15
+**              Interrupt request                          : Disabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : 
+**            Error                                        : 
+**              Interrupt                                  : INT_DMA_Error
+**              Interrupt request                          : Enabled
+**              Interrupt priority                         : 0 (Highest)
+**              ISR Name                                   : DMA_error
+**          Initialization                                 : 
+**            Call Init method                             : no
+\endcode
+*/
