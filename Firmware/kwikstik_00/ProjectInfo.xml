@@ -37,8 +37,8 @@
   <PATHS>
     <LinkerCommandFile>C:\projekte\Repo\KwikStick\Firmware\kwikstik_00\Project_Settings\Linker_Files\ProcessorExpert.lcf</LinkerCommandFile>
     <IncludePaths>
-      <Path>C:\Freescale\CW MCU v11.0\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\</Path>
-      <Path>C:\Freescale\CW MCU v11.0\MCU\ProcessorExpert\lib\Kinetis\iofiles\</Path>
+      <Path>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\</Path>
+      <Path>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\iofiles\</Path>
       <Path>C:\projekte\Repo\KwikStick\Firmware\kwikstik_00\Sources\</Path>
       <Path>C:\projekte\Repo\KwikStick\Firmware\kwikstik_00\Generated_Code\</Path>
     </IncludePaths>
@@ -110,6 +110,39 @@
       <PathName>C:\projekte\Repo\KwikStick\Firmware\kwikstik_00\Project_Headers\board.h</PathName>
       <PathName>C:\projekte\Repo\KwikStick\Firmware\kwikstik_00\Project_Headers\my.h</PathName>
       <PathName>C:\projekte\Repo\KwikStick\Firmware\kwikstik_00\Sources\Events.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\iofiles\MK40DZ10.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PDD_Types.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\ADC_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\CAN_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\CMP_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\CMT_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\CRC_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\DAC_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\DMAMUX_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\DMA_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\EWM_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\FMC_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\FTFL_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\FTM_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\GPIO_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\I2C_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\I2S_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\LCD_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\LPTMR_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\MCM_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PDB_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PIT_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\PORT_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\RTC_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\SDHC_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\SIM_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\SPI_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\SysTick_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\UART_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\USBDCD_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\USB_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\VREF_PDD.h</PathName>
+      <PathName>C:\Freescale\CW MCU v11.1\MCU\ProcessorExpert\lib\Kinetis\pdd\inc\WDOG_PDD.h</PathName>
     </GeneratedHs>
   </FILES>
   <OPTIONS>

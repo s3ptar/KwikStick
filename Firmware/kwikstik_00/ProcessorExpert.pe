@@ -2,9 +2,9 @@
 <PEproject>
   <Header>
     <Name>ProcessorExpert</Name>
-    <SavedBy>Besitzer</SavedBy>
-    <ModificationStamp>93</ModificationStamp>
-    <Date>2019-01-13</Date>
+    <SavedBy>rene_</SavedBy>
+    <ModificationStamp>94</ModificationStamp>
+    <Date>2019-09-15</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.9.2.RT6_b1446-0504</PEversion>
   </Header>
@@ -45,7 +45,7 @@
     <BeanType>MK40N512LQ100</BeanType>
     <Name>Cpu</Name>
     <CompNumb>2</CompNumb>
-    <CompEnabled>true</CompEnabled>
+    <CompEnabled>false</CompEnabled>
     <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
     <IconName>CPU_CHIP2</IconName>
     <UserFolderName />
@@ -12588,7 +12588,7 @@
     <BeanType>MK40N512LQ100</BeanType>
     <Name>Cpu</Name>
     <CompNumb>4</CompNumb>
-    <CompEnabled>false</CompEnabled>
+    <CompEnabled>true</CompEnabled>
     <GenCodeMode>ALWAYS_WRITE</GenCodeMode>
     <IconName>CPU_CHIP2</IconName>
     <UserFolderName />
@@ -25180,7 +25180,7 @@
   <Configuration>
     <CompNumb>1</CompNumb>
     <NodeName>MK40DX256ZVLQ10_INTERNAL_RAM</NodeName>
-    <CnfgEnabled>true</CnfgEnabled>
+    <CnfgEnabled>false</CnfgEnabled>
     <TargetCPU>2</TargetCPU>
     <ConfigurationComment lines_count="0" />
     <BoolList_FpgaConfig>
@@ -25261,7 +25261,7 @@
   <Configuration>
     <CompNumb>3</CompNumb>
     <NodeName>MK40DX256ZVLQ10_INTERNAL_FLASH</NodeName>
-    <CnfgEnabled>false</CnfgEnabled>
+    <CnfgEnabled>true</CnfgEnabled>
     <TargetCPU>4</TargetCPU>
     <ConfigurationComment lines_count="0" />
     <BoolList_FpgaConfig>
@@ -27710,7 +27710,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>Frequency</ItemSymbol>
-        <Value>6250 kHz</Value>
+        <Value>2621.44 kHz</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>HSCmode</ItemSymbol>
@@ -27810,19 +27810,19 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>ConvTime0</ItemSymbol>
-        <Value>16.90 us</Value>
+        <Value>40.29 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>ConvTime1</ItemSymbol>
-        <Value>22.66 us</Value>
+        <Value>54.03 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>ConvTime2</ItemSymbol>
-        <Value>16.00 us</Value>
+        <Value>38.15 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>ConvTime3</ItemSymbol>
-        <Value>21.76 us</Value>
+        <Value>51.88 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>CompFuncGrp</ItemSymbol>
@@ -29943,7 +29943,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>Frequency</ItemSymbol>
-        <Value>50 MHz</Value>
+        <Value>20.972 MHz</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>Modulus</ItemSymbol>
@@ -29955,7 +29955,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>Modulus_label</ItemSymbol>
-        <Value>125.000 us</Value>
+        <Value>298.023 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>ContModeEnable</ItemSymbol>
@@ -30467,7 +30467,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>TriggerInt0_label</ItemSymbol>
-        <Value>0.020 us</Value>
+        <Value>0.048 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>DACGroup1FeatureCondGroup</ItemSymbol>
@@ -30508,7 +30508,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>TriggerInt1_label</ItemSymbol>
-        <Value>0.020 us</Value>
+        <Value>0.048 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>PulseOuts</ItemSymbol>
